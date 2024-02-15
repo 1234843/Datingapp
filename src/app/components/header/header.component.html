@@ -1,0 +1,159 @@
+<div class="container">
+  <div class="page-1" *ngIf="showPage1; else page2" [@fadeInOut]>
+    <header id="main-header">
+      <div id="title">
+        <img
+          src="../../../assets/images/Screenshot 2024-02-13 at 7.32.18 PM.png"
+          alt="Dating logo"
+        />
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="rounded-button">
+        Get App
+        <i
+          class="fab fa-apple"
+          style="margin-right: 11px; margin-left: 5px"
+        ></i>
+        <i class="fab fa-google-play"></i>
+      </button>
+    </header>
+    <div class="data-container">
+      <div>
+        <p class="data">Welcome to our dating app!</p>
+        <h5 class="data-2">Find your perfect match today</h5>
+      </div>
+      <div class="button-container">
+        <button class="square-button">8.6M</button>
+        <div class="images-and-text-container">
+          <div class="images-container">
+            <img
+              class="users-img"
+              src="../../../assets/images/Photograph.jpg"
+              alt="User 1"
+            />
+            <img
+              class="users-img"
+              src="../../../assets/images/Photograph.jpg"
+              alt="User 2"
+            />
+            <img
+              class="users-img"
+              src="../../../assets/images/Photograph.jpg"
+              alt="User 3"
+            />
+          </div>
+          <h5 class="data-3">Join millions of happy users worldwide</h5>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <i class="fas fa-play-circle video-container"></i>
+      <h5 class="video-data">Watch Intro Video</h5>
+    </div>
+    <div class="animation-container">
+      <div class="box" [@flyInOutLeft]>
+        <button class="like-button"><i class="fas fa-heart"></i> Like</button>
+      </div>
+      <div class="box" [@flyInOutRight]>
+        <button class="like-button"><i class="fas fa-heart"></i> Like</button>
+      </div>
+      <div class="image-container">
+        <img
+          src="../../../assets/images/main-removebg-preview.png"
+          alt="User 3"
+        />
+      </div>
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-google"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+<ng-template #page2>
+  <div *ngIf="showPage2; else page3">
+    <!-- Page 2 content -->
+    <div class="page-2" style="background-color: pink">
+      <div class="left-content">
+        <h1 style="text-align: center">How it works</h1>
+        <img
+          style="height: 70%; width: 86%"
+          src="../../../assets/images/screen-removebg-preview.png"
+          alt="Image"
+        />
+      </div>
+      <div class="right-content">
+        <div style="width: 30%; height: 50%; padding-top: 78px" class="card">
+          <img
+            src="../../../assets/images/2-app-removebg-preview.png"
+            alt="Image"
+          />
+          <div>
+            <h4><b>Ideal Relationship</b></h4>
+            <p>Description of the card.</p>
+          </div>
+        </div>
+        <div style="width: 30%; height: 50%; padding-top: 78px" class="card">
+          <img
+            src="../../../assets/images/lip-removebg-preview.png"
+            alt="Image"
+          />
+          <div>
+            <h4><b>Dating With Benefits</b></h4>
+            <p>Description of the card.</p>
+          </div>
+        </div>
+        <div style="width: 30%; height: 50%; padding-top: 78px" class="card">
+          <img
+            src="../../../assets/images/3-app-removebg-preview (1).png"
+            alt="Image"
+          />
+          <div>
+            <h4><b>Date Beautiful People</b></h4>
+            <p>Description of the card.</p>
+          </div>
+        </div>
+      </div>
+      <button @fadeIn class="btn btn-primary btn-left animate__backInLeft">
+        Match Activity
+      </button>
+      <button @fadeRight class="btn btn-primary btn-right">Fashion</button>
+      <button @fadeBottom class="btn btn-primary btn-bottom">
+        30K + users
+      </button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #page3>
+  <div class="page-3">
+    <h1 style="text-align: center">Chat And Yamo Smart Match</h1>
+    <h5 style="text-align: center">Chat And Yamo Smart Match</h5>
+    <div style="height: 50%"></div>
+    <div style="text-align: center">
+      <button @fadeIn class="btn btn-primary btn-spot">Spotify</button>
+      <img
+        src="../../../assets/images/girl.jpeg"
+        alt="Your Image"
+        class="bounce-animation rotate-anticlockwise"
+      />
+      <img
+        src="../../../assets/images/boy.png"
+        alt="Your Image"
+        class="bounce-animation rotate-clockwise"
+      />
+      <button @fadeRight class="btn btn-primary btn-net">Netflix</button>
+      <button @fadeBottom class="btn btn-primary btn-bot">Favourite Places</button>
+    </div>
+  </div>
+</ng-template>
